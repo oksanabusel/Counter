@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Counter View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CounterViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ctb-tv-n29">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HealthBackground" translatesAutoresizingMaskIntoConstraints="NO" id="nug-TQ-4cE">
+                                <rect key="frame" x="99" y="250.5" width="177" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="9Yu-IY-qOs"/>
+                                    <constraint firstAttribute="height" constant="166" id="HeK-O4-9FY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="61" translatesAutoresizingMaskIntoConstraints="NO" id="jd6-NJ-puw">
+                                <rect key="frame" x="111.5" y="263" width="152" height="141"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="120"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1m-Qe-4Wo">
+                                <rect key="frame" x="196" y="442.5" width="80" height="80"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="N9A-FQ-o7E"/>
+                                    <constraint firstAttribute="height" constant="80" id="dLa-ud-agE"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="MinusImage"/>
+                                <connections>
+                                    <action selector="tapMinusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6f2-pn-ShA"/>
+                                    <outletCollection property="gestureRecognizers" destination="FIP-PF-8ij" appends="YES" id="SR9-qD-hpz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuQ-d5-a83">
+                                <rect key="frame" x="99" y="442.5" width="80" height="80"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="2AI-66-vpM"/>
+                                    <constraint firstAttribute="width" constant="80" id="hFO-eB-osr"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="PlusImage"/>
+                                <connections>
+                                    <action selector="tapAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uaC-Cj-Jsv"/>
+                                    <outletCollection property="gestureRecognizers" destination="Jo1-oc-vYN" appends="YES" id="YX6-aL-iTm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrL-9K-mwd">
+                                <rect key="frame" x="147.5" y="140.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="6Wh-wn-VCI"/>
+                                    <constraint firstAttribute="height" constant="80" id="NhF-wY-B7X"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Refresh"/>
+                                <connections>
+                                    <action selector="tapRefreshButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rFZ-zS-c1F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY4-Sn-Q1S">
+                                <rect key="frame" x="129" y="587" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="k1f-wG-cbJ"/>
+                                    <constraint firstAttribute="width" constant="50" id="mtL-Be-7Dy"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="plus10 "/>
+                                <connections>
+                                    <action selector="tapAddTenPointsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fwH-tW-2jg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aed-Bh-XsX">
+                                <rect key="frame" x="64" y="587" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NkK-LP-pC5"/>
+                                    <constraint firstAttribute="width" constant="50" id="OnW-S0-4eH"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="plus5"/>
+                                <connections>
+                                    <action selector="tapAddFivePointsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CyL-wi-cU1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y8-Ul-uud">
+                                <rect key="frame" x="196" y="587" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Lb0-yz-9AQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="n5J-iz-GC8"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="minus10"/>
+                                <connections>
+                                    <action selector="tapMinusTenPointsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WIJ-hD-9lg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeU-LL-TJF">
+                                <rect key="frame" x="261" y="587" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="7bb-ce-VNS"/>
+                                    <constraint firstAttribute="height" constant="50" id="QU9-ES-89Q"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="minus5"/>
+                                <connections>
+                                    <action selector="tapMinusFivePointsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVG-RB-VeM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q1m-Qe-4Wo" firstAttribute="top" secondItem="nug-TQ-4cE" secondAttribute="bottom" constant="26" id="1gz-O1-idA"/>
+                            <constraint firstItem="jd6-NJ-puw" firstAttribute="width" secondItem="nug-TQ-4cE" secondAttribute="width" constant="-25" id="2D5-JR-fWr"/>
+                            <constraint firstItem="AeU-LL-TJF" firstAttribute="centerY" secondItem="0y8-Ul-uud" secondAttribute="centerY" id="Fu6-a0-Jsq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0y8-Ul-uud" secondAttribute="bottom" constant="30" id="GtI-l9-aOn"/>
+                            <constraint firstItem="wuQ-d5-a83" firstAttribute="leading" secondItem="nug-TQ-4cE" secondAttribute="leading" id="NNe-HF-gGs"/>
+                            <constraint firstItem="0y8-Ul-uud" firstAttribute="leading" secondItem="Q1m-Qe-4Wo" secondAttribute="leading" id="VP0-Zg-8WJ"/>
+                            <constraint firstItem="nug-TQ-4cE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="X5c-df-NhV"/>
+                            <constraint firstItem="nug-TQ-4cE" firstAttribute="top" secondItem="qrL-9K-mwd" secondAttribute="bottom" constant="30" id="YwV-Jl-rUd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ctb-tv-n29" secondAttribute="trailing" id="ZMu-pD-KYG"/>
+                            <constraint firstItem="bY4-Sn-Q1S" firstAttribute="trailing" secondItem="wuQ-d5-a83" secondAttribute="trailing" id="a6p-Q5-u09"/>
+                            <constraint firstItem="jd6-NJ-puw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aq4-OU-zWV"/>
+                            <constraint firstItem="bY4-Sn-Q1S" firstAttribute="leading" secondItem="aed-Bh-XsX" secondAttribute="trailing" constant="15" id="cy7-cJ-gNG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bY4-Sn-Q1S" secondAttribute="bottom" constant="30" id="ekP-vd-LNV"/>
+                            <constraint firstItem="jd6-NJ-puw" firstAttribute="height" secondItem="nug-TQ-4cE" secondAttribute="height" constant="-25" id="fdP-kU-jI9"/>
+                            <constraint firstItem="Ctb-tv-n29" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gYF-1V-qyx"/>
+                            <constraint firstItem="jd6-NJ-puw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h5M-X2-vqA"/>
+                            <constraint firstItem="nug-TQ-4cE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j1Q-fv-7KZ"/>
+                            <constraint firstItem="qrL-9K-mwd" firstAttribute="centerX" secondItem="jd6-NJ-puw" secondAttribute="centerX" id="mfS-hh-mgW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ctb-tv-n29" secondAttribute="bottom" id="nxf-om-nMY"/>
+                            <constraint firstItem="Ctb-tv-n29" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oVe-rU-6RS"/>
+                            <constraint firstItem="AeU-LL-TJF" firstAttribute="leading" secondItem="0y8-Ul-uud" secondAttribute="trailing" constant="15" id="qM3-3j-8Ee"/>
+                            <constraint firstItem="aed-Bh-XsX" firstAttribute="centerY" secondItem="bY4-Sn-Q1S" secondAttribute="centerY" id="quE-jZ-oDc"/>
+                            <constraint firstItem="Q1m-Qe-4Wo" firstAttribute="trailing" secondItem="nug-TQ-4cE" secondAttribute="trailing" id="xWs-QQ-vm0"/>
+                            <constraint firstItem="wuQ-d5-a83" firstAttribute="top" secondItem="nug-TQ-4cE" secondAttribute="bottom" constant="26" id="zh8-yH-tCf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="healthPointsLabel" destination="jd6-NJ-puw" id="hn9-qS-R5D"/>
+                        <outlet property="minusButton" destination="Q1m-Qe-4Wo" id="JLO-ud-qoX"/>
+                        <outlet property="plusButton" destination="wuQ-d5-a83" id="BvJ-oO-69S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Jo1-oc-vYN">
+                    <connections>
+                        <action selector="tapAddButton:" destination="BYZ-38-t0r" id="Gsy-th-9sG"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="FIP-PF-8ij">
+                    <connections>
+                        <action selector="tapMinusButton:" destination="BYZ-38-t0r" id="nL4-Yw-4cw"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackgroundImage" width="6000" height="3375"/>
+        <image name="HealthBackground" width="123" height="123"/>
+        <image name="MinusImage" width="443" height="444"/>
+        <image name="PlusImage" width="441" height="444"/>
+        <image name="Refresh" width="249" height="250"/>
+        <image name="minus10" width="444" height="443"/>
+        <image name="minus5" width="444" height="443"/>
+        <image name="plus10 " width="445" height="444"/>
+        <image name="plus5" width="445" height="444"/>
+    </resources>
+</document>
